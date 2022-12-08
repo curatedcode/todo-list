@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const data = require('./src/tasks.json')
 
 module.exports = {
     entry: {
@@ -12,18 +13,6 @@ module.exports = {
         },
         compress: true,
         port: 3000,
-        setup(app){
-            const bodyParser = require('body-parser')
-            app.use(bodyParser.json())
-            app.get('./data', function(req,res){
-                console.log(req)
-                res.send('Get res sent from server')
-            })
-            app.post('./data', function(req, res){
-                console.log(req.body)
-                res.send('Post res sent from server')
-            })
-        },
     },
     plugins: [
         new HtmlWebpackPlugin({
