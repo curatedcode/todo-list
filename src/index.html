@@ -30,10 +30,14 @@
                 <div class="header-date">Mon Nov 28</div>
             </div>
             <div class="task-container">
-                <div class="task-icon"></div>
-                <div class="task-input">placeholder task text lorem ipsum stuffy stuff texty text goes here for now big dog</div>
-                <div class="task-date">8/21</div>
-                <div class="task-edit fa-solid fa-pen-to-square"></div>
+                <div class="task-content-one">
+                    <div class="task-icon fa-regular fa-circle"></div>
+                    <div class="task-text">placeholder task text lorem ipsum stuffy stuff texty text goes here for now big dog</div>    
+                </div>
+                <div class="task-content-two">
+                    <div class="task-date-time">8/21</div>
+                    <div class="task-edit fa-solid fa-ellipsis"></div>
+                </div>
             </div>
         </div>
         <div class="add-task-btn fa-solid fa-circle-plus hover-standard"></div>
@@ -43,9 +47,21 @@
             <input type="text" name="add-task-title" id="add-task-title" class="add-task-title" placeholder="title">
             <textarea name="add-task-description" id="add-task-description" cols="1" rows="10" class="add-task-description" placeholder="Here you can add some notes to your task"></textarea>
             <div class="add-task-flags">
-                <div class="add-task-priority fa-solid fa-flag"></div>
-                <div class="add-task-time fa-solid fa-clock"></div>
-                <div class="add-task-date fa-solid fa-calendar-days"></div>
+                <div class="add-task-group fa-solid fa-layer-group">
+                    <select name="group" id="add-group-list" class="add-group-list">
+                        <option value="none">None</option>
+                        <option value="test">Test</option>
+                    </select>
+                </div>
+                <div class="add-task-priority fa-solid fa-flag">
+                    <select name="priority" id="add-priority-list" class="add-priority-list">
+                        <option value="high">High</option>
+                        <option value="normal">Normal</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+                <input type="time" name="add-task-time" id="add-task-time" class="add-task-time">
+                <input type="date" name="add-task-date" id="add-task-date" class="add-task-date">
             </div>
             <div class="add-task-action-container">
                 <div class="add-task-cancel hover-standard">Cancel</div>
@@ -58,9 +74,21 @@
             <input type="text" name="edit-task-title" id="edit-task-title" class="edit-task-title">
             <textarea name="edit-task-description" id="edit-task-description" cols="1" rows="10" class="edit-task-description"></textarea>
             <div class="edit-task-flags">
-                <div class="edit-task-priority fa-solid fa-flag"></div>
-                <div class="edit-task-time fa-solid fa-clock"></div>
-                <div class="edit-task-date fa-solid fa-calendar-days"></div>
+                <div class="edit-task-group fa-solid fa-layer-group">
+                    <select name="group" id="edit-group-list" class="edit-group-list">
+                        <option value="none">None</option>
+                        <option value="test">Test</option>
+                    </select>
+                </div>
+                <div class="edit-task-priority fa-solid fa-flag">
+                    <select name="priority" id="edit-priority-list" class="edit-priority-list">
+                        <option value="high">High</option>
+                        <option value="normal">Normal</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+                <input type="time" name="edit-task-time" id="edit-task-time" class="edit-task-time">
+                <input type="date" name="edit-task-date" id="edit-task-date" class="edit-task-date">
             </div>
             <div class="edit-task-action-container">
                 <div class="edit-task-cancel hover-standard">Cancel</div>
