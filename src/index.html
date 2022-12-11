@@ -10,17 +10,16 @@
 <body>
     <div class="nav-bar">
         <div class="open-sidebar fa-solid fa-bars nav-item"></div>
-        <a href="./">
-            <div class="home-btn fa-solid fa-house nav-item"></div>
-        </a>
     </div>
     <div class="nav-sidebar">
         <div class="close-container">
             <div class="close-sidebar fa-solid fa-xmark"></div>
         </div>
         <div class="projects-container">
-            <div class="filter">All</div>
-            <div class="filter">Personal</div>
+            <div class="default-filter">All</div>
+            <div class="filter-group">
+                
+            </div>
         </div>
     </div>
     <div class="main-container">
@@ -28,16 +27,6 @@
             <div class="main-header">
                 <div class="header-today">Today</div>
                 <div class="header-date">Mon Nov 28</div>
-            </div>
-            <div class="task-container">
-                <div class="task-content-one">
-                    <div class="task-icon fa-regular fa-circle"></div>
-                    <div class="task-text">placeholder task text lorem ipsum stuffy stuff texty text goes here for now big dog</div>    
-                </div>
-                <div class="task-content-two">
-                    <div class="task-date-time">8/21</div>
-                    <div class="task-edit fa-solid fa-ellipsis"></div>
-                </div>
             </div>
         </div>
         <div class="add-task-btn fa-solid fa-circle-plus hover-standard"></div>
@@ -49,14 +38,14 @@
             <div class="add-task-flags">
                 <div class="add-task-group fa-solid fa-layer-group">
                     <select name="group" id="add-group-list" class="add-group-list">
-                        <option value="none">None</option>
-                        <option value="test">Test</option>
+                        <option value="None" class="group-default" selected>None</option>
                     </select>
+                    <div class="add-project-btn fa-solid fa-circle-plus hover-standard"></div>
                 </div>
                 <div class="add-task-priority fa-solid fa-flag">
                     <select name="priority" id="add-priority-list" class="add-priority-list">
                         <option value="high">High</option>
-                        <option value="normal">Normal</option>
+                        <option value="normal" selected class="priority-default">Normal</option>
                         <option value="low">Low</option>
                     </select>
                 </div>
@@ -76,9 +65,9 @@
             <div class="edit-task-flags">
                 <div class="edit-task-group fa-solid fa-layer-group">
                     <select name="group" id="edit-group-list" class="edit-group-list">
-                        <option value="none">None</option>
-                        <option value="test">Test</option>
+                        <option value="None">None</option>
                     </select>
+                    <div class="edit-project-btn fa-solid fa-circle-plus"></div>
                 </div>
                 <div class="edit-task-priority fa-solid fa-flag">
                     <select name="priority" id="edit-priority-list" class="edit-priority-list">
