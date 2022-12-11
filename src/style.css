@@ -53,6 +53,28 @@ body {
 .projects-container {
     font-size: 20px;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.default-filter:hover,.filter-group > div:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.filter-group {
+    text-align: center;
+}
+
+.add-project-btn:after {
+    color: #fff;
+    cursor: pointer;
+    transition: ease 0.3s;
+    margin: 5px 0 10px;
+    position: absolute;
+    top: 0;
 }
 
 a {
@@ -106,10 +128,6 @@ a {
 .task-content-one, .task-content-two {
     display: flex;
     gap: 10px;
-}
-
-.task-content-one {
-
 }
 
 .task-icon {
@@ -200,12 +218,10 @@ a {
     gap: 5px;
 }
 
-.add-task-flags > div, .edit-task-flags > div {
-    cursor: pointer;
-}
-
-.add-task-flags > *:hover{
+.add-task-priority > select:hover, .edit-task-priority > select:hover,
+.add-task-group > select:hover, .edit-task-group > select:hover{
     scale: 1.1;
+    cursor: pointer;
 }
 
 .add-task-action-container, .edit-task-action-container {
